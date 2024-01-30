@@ -5,7 +5,7 @@ using System.Net.Http;
 using ViewModel.Model;
 using webapi.Service;
 using Microsoft.AspNetCore.WebUtilities;
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+//For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace webapi.Controllers
 {
