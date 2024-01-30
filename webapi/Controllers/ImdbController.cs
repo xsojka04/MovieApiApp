@@ -11,7 +11,7 @@ namespace webapi.Controllers
         public async Task<IActionResult> RatingsAsync(string imdbid)
         {
             HttpClient client = new HttpClient();
-            var uri = $"https://imdb-api.com/en/API/Ratings/k_7xmj1opm/{imdbid}";
+            var uri = $"https://imdb-api.com/en/API/Ratings/****/{imdbid}";
 
             try
             {

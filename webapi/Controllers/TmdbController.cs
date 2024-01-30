@@ -27,7 +27,7 @@ namespace webapi.Controllers
             }
 
             HttpClient client = new HttpClient();
-            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5ZjU4NGEyYTIwYmM5OWQyYmUxYzBkNTRiNWFiMzVjYyIsInN1YiI6IjY0MDRmZjY2MzgzZGYyMDA3YmM4MWEwYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Hp9ydf3ZxUCiURHuZAuNcd4MQsN6-Id4sWc601rRis0");
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "******");
 
             try
             {
