@@ -9,4 +9,8 @@ This is done this way because we did not want to store our access tokens in the 
 
 As mentioned above, the frontend application is written in Vue.js and was created using Visual Studio's template. For visualization of the movie networks we used the package "v-network-graph".
 
+![image](https://github.com/xsojka04/MovieApiApp/assets/52315948/264a50a9-b0ba-4639-a61b-f6ed3469c14c)
 
+![image](https://github.com/xsojka04/MovieApiApp/assets/52315948/6b2f540b-c26e-42d7-b920-071891b02c7f)
+
+![image](https://github.com/xsojka04/MovieApiApp/assets/52315948/3a6d2cad-f29b-4081-9b44-41e2b9a80b9e)
