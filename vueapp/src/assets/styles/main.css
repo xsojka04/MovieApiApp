@@ -1,0 +1,495 @@
+@font-face {
+    font-family: adventure;
+    src: url('../fonts/adventure/Adventure.ttf');
+}
+
+body {
+    background: url('../background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+
+    padding-inline: 2rem;
+    align-items: center;
+    height: 80px;
+
+}
+
+nav>div {
+    flex: 1 1 0;
+}
+
+nav div:first-child {
+    text-align: left;
+}
+
+nav>div:last-child {
+    text-align: right;
+}
+
+nav img {
+    width: 50px;
+}
+
+.search-bar input {
+    height: 2.5rem;
+    border-radius: 1.25rem;
+    font-weight: 100;
+    padding-left: 2rem;
+    border: none;
+    font-size: 20px;
+    width: 100%;
+}
+
+.user-actions img {
+    filter: brightness(0) invert(1);
+}
+
+.user-actions {
+    color: white;
+}
+
+.login-button {
+    padding-inline: 3rem;
+    padding-block: 0.5rem;
+    color: white;
+    font-weight: 700;
+    border-radius: 2rem;
+    border: none;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(41deg, rgba(2, 0, 36, 1) 0%, rgba(47, 47, 171, 1) 30%, rgba(37, 137, 189, 1) 95%);
+}
+
+.login-card {
+    color: white;
+    border-radius: 5px;
+    backdrop-filter: blur(14px);
+    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#search_results {
+    overflow-y: auto;
+    max-height: 80vh;
+    text-decoration: none;
+    color: white;
+    z-index: 2;
+
+    text-align: left;
+    position: absolute;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 3px;
+}
+
+#search_results::-webkit-scrollbar {
+    width: 10px;
+}
+
+#search_results::-webkit-scrollbar:hover {
+    cursor: pointer;
+}
+
+
+/* Track */
+#search_results::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+#search_results::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+#search_results::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+#search_results>div {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(10, 12, 24, 0.9);
+}
+
+#search-wrapper {
+    position: relative;
+}
+
+.search-group-title {
+    padding-inline: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: white;
+    color: black;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-block: 1rem;
+}
+
+#logo {
+    filter: brightness(0) invert(1);
+}
+
+#web {
+    filter: brightness(0) invert(1);
+}
+
+#logo:hover {
+    cursor: pointer;
+    filter: brightness(50) invert(0.5);
+}
+
+#web:hover {
+    cursor: pointer;
+    filter: brightness(5) invert(1);
+}
+
+.left-menu {
+    display: flex;
+    gap: 1rem;
+}
+
+.search-item {
+    padding: 1rem;
+    min-height: 125px;
+    display: flex;
+    gap: 1rem;
+}
+
+.search-item:hover {
+    cursor: pointer;
+    color: #BBBBBB
+}
+
+.search-item-info {
+    padding-top: 1rem;
+    align-items: center;
+    text-align: left;
+
+}
+
+.search-item p {
+    margin-bottom: 5px;
+    padding-right: 2rem;
+}
+
+.search-item>div .search-item-image {
+    flex: 1 1 0;
+}
+
+
+.search-item-image-wrapper {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.search-item-image-wrapper img {
+    min-width: 100px;
+    min-height: 100px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.search-item>div .search-item-info {
+    flex: 3 1 0;
+    position: relative;
+}
+
+.item-date {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.ratings {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.ratings span {
+    border: 2px solid white;
+    background-color: white;
+    color: black;
+    border-radius: 5rem;
+    padding-inline: 0.5rem;
+}
+
+.genres {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.genres span {
+    border: 2px solid white;
+    border-radius: 5rem;
+    padding-inline: 0.5rem;
+}
+
+#app {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100vh;
+    width: 100%;
+}
+
+.movie-show {
+    position: fixed;
+    padding-inline: 5vw;
+    bottom: 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    align-content: space-between;
+}
+
+.movie-show>div {
+    flex: 1;
+    text-align: justify;
+}
+
+.basic-button {
+    margin-block: 1rem;
+    padding-inline: 3rem;
+    padding-block: 0.5rem;
+    color: white;
+    font-weight: 700;
+    border-radius: 2rem;
+    border: none;
+}
+
+.favorite-button {
+
+    background: rgb(2, 0, 36);
+    background: linear-gradient(41deg, rgba(2, 0, 36, 1) 0%, rgba(47, 47, 171, 1) 30%, rgba(37, 137, 189, 1) 95%);
+}
+
+.favorite-button-back {
+
+    background: rgb(2, 0, 36);
+    background: linear-gradient(41deg, rgba(2, 0, 36, 1) 0%, rgb(202, 39, 66) 30%, rgb(248, 176, 42) 95%);
+}
+
+.profile-image img {
+    width: 100%;
+    height: auto;
+}
+
+.actor .profile-image {
+    display: inline-block;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.actor a {
+    color: white;
+
+}
+
+.actor {
+    text-align: center;
+    flex: 0;
+}
+
+.actor h6 {
+    color: #BBBBBB;
+}
+
+.actors {
+    place-content: flex-end;
+    justify-content: left;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.back-button {
+    position: absolute;
+    top: 100px;
+    left: 5vw;
+
+    background: rgb(2, 0, 36);
+    background: linear-gradient(41deg, rgba(2, 0, 36, 1) 0%, rgb(202, 39, 66) 30%, rgb(248, 176, 42) 95%);
+}
+
+.person-show {
+    display: flex;
+    gap: 2rem;
+    padding-inline: 5vw;
+    align-items: center;
+}
+
+.person-show>div {
+    flex: 1;
+}
+
+.person-show p {
+    text-align: justify;
+}
+
+.person-show h1 {
+    text-align: left;
+}
+
+.person-show .description {
+    font-size: 1.5rem;
+    max-height: 30vh;
+    overflow-y: hidden;
+    padding-right: 1rem;
+}
+
+.description::-webkit-scrollbar {
+    width: 10px;
+}
+
+.description::-webkit-scrollbar:hover {
+    cursor: pointer;
+}
+
+.description::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.description::-webkit-scrollbar-thumb {
+    background: rgb(29, 99, 136);
+}
+
+.description::-webkit-scrollbar-thumb:hover {
+    background: rgba(37, 137, 189, 1);
+}
+
+.person-show img {
+    max-width: 100%;
+    max-height: 50vh;
+}
+
+.movies-trail {
+    margin-top: 2rem;
+    display: flex;
+    overflow-x: auto;
+}
+
+.movies-trail::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+.movies-trail::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+.movies-trail::-webkit-scrollbar-thumb {
+    background: rgb(29, 99, 136);
+}
+
+/* Handle on hover */
+.movies-trail::-webkit-scrollbar-thumb:hover {
+    background: rgba(37, 137, 189, 1);
+    cursor: pointer;
+}
+
+.movie-card {
+    text-align: center;
+    min-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.movie-card img {
+    max-height: 280px;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.movie-card:hover {
+    cursor: pointer;
+    color: #bbbbbb
+}
+
+.title {
+    font-family: adventure;
+}
+
+.seasons {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    overflow: hidden;
+}
+
+.seasons li {
+    padding-left: 2rem;
+}
+
+.reset-button {
+    position: absolute;
+    top: 200px;
+    left: 5vw;
+    z-index: 2;
+
+    margin-block: 1rem;
+    padding-inline: 3rem;
+    padding-block: 0.5rem;
+    color: white;
+    font-weight: 700;
+    border-radius: 2rem;
+    border: none;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(41deg, rgba(2, 0, 36, 1) 0%, rgb(202, 39, 66) 30%, rgb(248, 176, 42) 95%);
+}
+
+section {
+    margin-left: 5vw;
+    text-align: left;
+    margin-top: 5vh;
+}
+
+.section-title {
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
+.welcome-message {
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: left;
+    padding-left: 5vw;
+}
+
+.empty-web {
+    background: linear-gradient(43deg, rgb(1, 0, 14) 0%, rgb(5, 13, 15) 16%, rgb(12, 12, 31) 42%, rgb(33, 19, 54) 69%, rgb(6, 36, 21) 95%);
+}
+.empty-web-info {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    top: 30rem;
+    left: 0;
+}
+.person-info {
+    text-align: left;
+}
